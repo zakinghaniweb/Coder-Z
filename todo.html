@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+    <a style="position: absolute; left: 30px; top: 30px;" href="index.html" class="card-btn card-btn-gradient">Back</a>
+    <a style="position: absolute; right: 30px; top: 30px;" href="ngg.html" class="card-btn card-btn-gradient">Game</a>
+    <!-- ===== Preloader Start ===== -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+        <h1 class="preloader-heading">Loading<span id="dots"></span></h1>
+    </div>
+    <!-- ===== Preloader End ===== -->
+    <!-- ===== Todo Start ===== -->
+    <div class="container">
+        <div class="todo-wrap">
+            <div class="todoHead">
+                <h1 class="todoHeading">To-Do List :</h1>
+                <div class="todo-count">
+                    <h3><span class="todo-done">0</span> / <span class="todo-total-count">0</span></h3>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="todo-input" placeholder="Add a new task..." />
+                <button id="add-btn">Add</button>
+            </div>
+            <ul id="todo-list">
+            </ul>
+        </div>
+    </div>
+    <!-- ===== Todo End ===== -->
+    <script src="js/todo.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

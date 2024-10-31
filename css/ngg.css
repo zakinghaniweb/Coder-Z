@@ -1,0 +1,251 @@
+/* Font Css Start */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+/* Font Css End */
+/* Game Css Start */
+
+:root{
+    --font: "Playwrite DE Grund", cursive;
+}
+body{
+    background: url("../img/background.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-style{
+    color: #fff;
+    text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 15px #0ff,
+    0 0 20px #0ff,
+    0 0 30px #0ff,
+    0 0 40px #0ff,
+    0 0 50px #0ff,
+    0 0 60px #0ff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: var(--font);
+}
+.text-style2{
+    color: #fff;
+    text-shadow:
+    0 0 5px #ff13ff,
+    0 0 10px #ff13ff,
+    0 0 15px #ff13ff,
+    0 0 20px #ff13ff,
+    0 0 30px #ff13ff,
+    0 0 40px #ff13ff,
+    0 0 50px #ff13ff,
+    0 0 60px #ff13ff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: var(--font);
+}
+.text-style3{
+    color: #fff;
+    text-shadow:
+    0 0 5px #caff2c,
+    0 0 10px #caff2c,
+    0 0 15px #caff2c,
+    0 0 20px #caff2c,
+    0 0 30px #caff2c,
+    0 0 40px #caff2c,
+    0 0 50px #caff2c,
+    0 0 60px #caff2c;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: var(--font);
+}
+.mainCard{
+    width: 700px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px dashed #0ff;
+}
+.input-group-void{
+    width: 400px;
+    background: rgba(0, 0, 0, .3);
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 10px #0ff;
+}
+.input-group-void2{
+    width: 400px;
+    background: rgba(0, 0, 0, .3);
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ff13ff;
+    box-shadow: 0 0 10px #ff13ff;
+}
+.input-group-void3{
+    width: 400px;
+    background: rgba(0, 0, 0, .3);
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #caff2c;
+    box-shadow: 0 0 10px #caff2c;
+}
+.input-group-void input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+}
+.input-group-void2 input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+}
+.input-group-void3 input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+}
+.input-group-void button{
+    width: 150px;
+    height: 100%;
+    background: #0ff;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: var(--font);
+    transition: .2s all ease;
+}
+.input-group-void button:hover{
+    background: #fff;
+    color: #0ff;
+}
+.input-group-void2 button{
+    width: 150px;
+    height: 100%;
+    background: #ff13ff;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: var(--font);
+    transition: .2s all ease;
+}
+.input-group-void2 button:hover{
+    background: #fff;
+    color: #ff13ff;
+}
+.input-group-void3 button{
+    width: 150px;
+    height: 100%;
+    background: #caff2c;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: var(--font);
+    transition: .2s all ease;
+}
+.input-group-void3 button:hover{
+    background: #fff;
+    color: #caff2c;
+}
+.text-style-input{
+    color: #fff;
+    text-shadow:
+    0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 15px #0ff;
+    font-family: var(--font);
+}
+.text-style-input2{
+    color: #fff;
+    text-shadow:
+    0 0 5px #ff13ff,
+    0 0 10px #ff13ff,
+    0 0 15px #ff13ff;
+    font-family: var(--font);
+}
+.text-style-input3{
+    color: #fff;
+    text-shadow:
+    0 0 5px #caff2c,
+    0 0 10px #caff2c,
+    0 0 15px #caff2c;
+    font-family: var(--font);
+}
+.playerTwo{
+    display: none;
+    border: 5px dashed #ff13ff;
+}
+.playerThree{
+    display: none;
+    border: 5px dashed #caff2c;
+}
+/* Winner Css Start */
+.winner1{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.winner2{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.winner3{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.win-text{
+    color: #fff;
+    text-shadow:
+    0 0 5px #D4AF37,
+    0 0 10px #D4AF37,
+    0 0 15px #D4AF37;
+    font-family: var(--font);
+}
+/* Winner Css End */
+/* Game Css End */

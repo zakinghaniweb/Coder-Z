@@ -1,0 +1,591 @@
+/* ===== Fonts Css Start ===== */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* ===== Fonts Css End ===== */
+/* ===== Common Css Start ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+:root{
+    --brandFont: 'Nunito', sans-serif;
+    --brandColor: #2FA0F5;
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+    --bg: #1c1c1c;
+    --text-height: 300px;
+}
+/* ===== Common Css End ===== */
+/* ===== Background Css Start ===== */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(40deg, #6c00a2, #001152, #6c00a2);
+    overflow: hidden;
+    z-index: -1;
+}
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 1;
+    filter: blur(90px);
+    animation: move 20s infinite linear;
+    box-shadow: 0 0 200px 100px;
+}
+.bubble1 {
+    width: 150px; height: 350px;
+    background: radial-gradient(circle at 30% 30%, #DB4BFD, rgba(255,0,255,0));
+    box-shadow: 0 0 300px 150px #DB4BFD;
+}
+.bubble2 {
+    width: 250px; height: 500px;
+    background: radial-gradient(circle at 30% 30%, #41C8FB, rgba(0,255,255,0));
+    box-shadow: 0 0 300px 150px #41C8FB;
+}
+.bubble3 {
+    width: 250px; height: 450px;
+    background: radial-gradient(circle at 30% 30%, #CD3B9C, rgba(255,204,0,0));
+    box-shadow: 0 0 300px 150px #CD3B9C;
+}
+.bubble4 {
+    width: 150px; height: 300px;
+    background: radial-gradient(circle at 30% 30%, #805CEE, rgba(255,102,0,0));
+    box-shadow: 0 0 300px 150px #805CEE;
+}
+.bubble5 {
+    width: 250px; height: 550px;
+    background: radial-gradient(circle at 30% 30%, #6699ff, rgba(102,153,255,0));
+    box-shadow: 0 0 300px 150px #6699ff;
+}
+.bubble6 {
+    width: 200px; height: 400px;
+    background: radial-gradient(circle at 30% 30%, #ff3366, rgba(255,51,102,0));
+    box-shadow: 0 0 300px 150px #ff3366;
+}
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(150px, -200px);
+    }
+    50% {
+        transform: translate(-200px, 250px);
+    }
+    75% {
+        transform: translate(250px, -100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.bubble1 { top: 10%; left: 20%; animation-delay: 0s; }
+.bubble2 { top: 50%; left: 60%; animation-delay: 1s; }
+.bubble3 { top: 30%; left: 80%; animation-delay: 2s; }
+.bubble4 { top: 60%; left: 30%; animation-delay: 3s; }
+.bubble5 { top: 20%; left: 50%; animation-delay: 4s; }
+.bubble6 { top: 70%; left: 10%; animation-delay: 5s; }
+/* ===== Background Css End ===== */
+/* ===== Preloader Css Start ===== */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #222;
+    transform: scale(200%);
+    z-index: 999999;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#preloader h1 {
+    font-size: 18px;
+    color: #ece2ff;
+    text-align: center;
+    position: absolute;
+    font-family: var(--brandFont);
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    text-shadow:
+    0 0 5px #BA55D3,
+    0 0 10px #BA55D3,
+    0 0 15px #BA55D3,
+    0 0 20px #BA55D3,
+    0 0 25px #BA55D3,
+    0 0 30px #BA55D3;
+    transform: translate(-50%, -50%);
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #9370DB;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+    0%   {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ===== Preloader Css End ===== */
+/* ===== Name Login Css Start ===== */
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 360deg;
+    inherits: false;
+}
+.modal-title{
+    color: #ffffff;
+}
+.modal-content{
+    background: #222222;
+    position: relative;
+}
+.modal-content::before {
+    content: "";
+    width: 104%;
+    height: 112%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -5%;
+    left: -2%;
+    animation: spinmodal 2s linear infinite;
+}
+.modal-content::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spinmodal 2s linear infinite;
+}
+@keyframes spinmodal {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+}
+.input-group-custom{
+    width: 470px;
+    height: 50px;
+    background-color: #333333;
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid var(--brandColor);
+}
+.input-group-custom input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    color: white;
+    font-family: var(--brandFont);
+    font-weight: 700;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.modal-footer button{
+    background-color: var(--brandColor);
+    font-family: var(--brandFont);
+    font-weight: 600;
+}
+/* ===== Name Login Css End ===== */
+/* ===== Welcome Css Start ===== */
+.confetti{
+    max-width: 100%;
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    user-select: none;
+}
+.welcome{
+    width: 100%;
+    height: 100%;
+    background-color: #1C1C1C;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: .5s all ease;
+}
+.sparkle {
+    width: 600px;
+    height: var(--text-height);
+    font-size: 50px;
+    text-align: center;
+    line-height: var(--text-height);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    z-index: 100;
+    position: relative;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+.star {
+    --star-size: 50px;
+    --star-life: 5s;
+    
+    --start-left: 0px;
+    --start-top: 0px;
+    
+    --end-left: 0px;
+    --end-top: 0px;
+    
+    --star-color: #f1c40f;
+    
+    width: var(--star-size);
+    height: var(--star-size);
+    left: var(--end-left);
+    top: var(--end-top);
+    background: var(--star-color);
+    position: absolute;
+    mix-blend-mode: lighten;
+    animation: slide var(--star-life) ease-in forwards;
+}
+
+.star:after {
+    display: block;
+    content: "";
+    width: var(--star-size);
+    height: var(--star-size);
+    background-color: var(--bg);
+    border-radius: 100%;
+    position: relative;
+    top: calc(var(--star-size) / 2 * -1);
+    left: calc(var(--star-size) / 2 * -1);
+    box-shadow: var(--star-size) var(--star-size) var(--bg),
+    var(--star-size) 0px var(--bg),
+    0px var(--star-size) var(--bg);
+}
+
+@keyframes slide {
+    0%{
+    left: var(--start-left);
+    top: var(--start-top);
+    transform: rotate(0deg);
+    opacity: 0;
+    }
+    100%{
+    left: var(--end-left);
+    top: var(--end-top);
+    transform: rotate(calc(180deg * var(--star-life-num))) scale(0.5);
+    opacity: 1;
+    }
+}
+/* ===== Welcome Css End ===== */
+/* ===== Cursor Gradient Css Start ===== */
+#followDiv {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(45deg, #ff552f, #ff416c, #8e44ad, #3498db);
+    border-radius: 50%;
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+    filter: blur(30px);
+    opacity: .7;
+    z-index: -1;
+    box-shadow: 0px 0px 20px rgba(255, 100, 200, 0.5);
+}
+/* ===== Cursor Gradient Css End ===== */
+/* ===== Navbar Css Start ===== */
+.main-menu{
+    width: 100%;
+    background: rgba(37, 37, 37, 0.7);
+    backdrop-filter: blur(50px);
+    height: 90px;
+    transform: translateY(-90px);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.main-menu ul{
+    gap: 30px;
+    align-items: center;
+}
+.main-menu ul li a{
+    color: #ffffff;
+    font-family: var(--brandFont);
+    font-weight: 700;
+}
+.main-menu ul li a:hover{
+    color: var(--brandColor);
+}
+.nav-link:focus{
+    color: #0f5a94 !important;
+}
+input[type=checkbox] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+    position: absolute;
+}
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 30px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #a6a6a6;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+input:checked + label {
+	background: #FFF;
+}
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+/* ===== Navbar Css End ===== */
+/* ===== Cards Css Start ===== */
+.cards-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.single-card{
+    width: 400px;
+    height: 670px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0) 80%);
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background 0.2s ease-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.single-card h2{
+    margin-top: 15px;
+    text-align: center;
+    padding: 0 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.single-card img{
+    width: 1000px;
+}
+.single-card p{
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 30px;
+    font-weight: 600;
+    color: #b7b7b7;
+}
+.card-btn {
+    position: relative;
+    padding: 1rem 3rem;
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    border: transparent;
+    outline: transparent;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    animation: glow 8s linear infinite;
+}
+
+.card-btn-gradient {
+    color: white;
+    background: linear-gradient(90deg, #00dbde, #fc00ff, #00dbde);
+    background-size: 300%;
+    border-radius: 2em;
+    position: relative;
+}
+
+.card-btn-gradient::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    background: inherit;
+    background-size: inherit;
+    border-radius: 4em;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card-btn-gradient:hover::before {
+    opacity: 1;
+    filter: blur(20px);
+    animation: glow 8s linear infinite;
+}
+
+@keyframes glow {
+    to {
+    background-position: 300%;
+    }
+}
+.single-card .add-favorite{
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: black;
+    transition: .3s all linear;
+}
+.single-card .add-favorite:hover{
+    background-color: white;
+}
+.single-card .add-favorite:hover i{
+    color: #000;
+}
+.single-card .add-favorite:focus{
+    background-color: white;
+}
+.single-card .add-favorite:focus i{
+    color: #000;
+    color: #6a6a6a;
+}
+.single-card .add-favorite i{
+    color: #fff;
+}
+/* ===== Cards Css End ===== */
+/* ===== Footer Css Start ===== */
+#footer{
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    background: rgba(51, 51, 51, .8);
+    transition: .3s all ease;
+}
+.footer-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.footer-logo{
+    margin: 0 auto;
+    width: 350px;
+}
+.footer-row p{
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+}
+.footer-row h3{
+    color: #bcbcbc;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+.footer-modal-text{
+    color: #bcbcbc;
+    font-size: 16px;
+    font-weight: 700;
+}
+.footer-modal-text-h{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 0;
+}
+/* ===== Footer Css End ===== */
+/* ==== Copyright Zakin Ghani & Mehedi Hasan Tanjim ==== */

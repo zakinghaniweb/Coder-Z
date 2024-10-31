@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guessing game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ngg.css">
+</head>
+<body>
+    <a style="position: absolute; left: 30px; top: 30px;" href="index.html" class="card-btn card-btn-gradient">Back</a>
+    <a style="position: absolute; right: 30px; top: 30px;" href="todo.html" class="card-btn card-btn-gradient">Todo</a>
+    <!-- Preloader One Start -->
+    <div id="preloader">
+        <div id="loader">
+        </div>
+        <h1 class="preloader-heading">Loading<span id="dots"></span></h1>
+    </div>
+    <!-- Preloader One End -->
+    <!-- Game Html Start -->
+    <!-- Player One Start -->
+    <div class="mainCard playerOne">
+        <h1 class="text-style player-name">Player 1</h1>
+        <div class="input-group-void">
+            <input class="playerOneInput text-style-input" onkeydown="player1HandleInput(event)" type="number">
+            <button class="playerOneButton" type="submit">Set</button>
+        </div>
+    </div>
+    <!-- Player One End -->
+    <!-- Player Two Start -->
+    <div class="mainCard playerTwo">
+        <h1 class="text-style2 player-name">Player 2</h1>
+        <div class="input-group-void2">
+            <input class="playerTwoInput text-style-input2" onkeydown="player2HandleInput(event)" type="number">
+            <button class="playerTwoButton" type="submit">Guess</button>
+        </div>
+        <h4 class="text-style2">Chances left: <span class="chanceleft">0</span>/3</h4>
+    </div>
+    <!-- Player Two End -->
+    <!-- Player Three Start -->
+    <div class="mainCard playerThree">
+        <h1 class="text-style3 player-name">Player 3</h1>
+        <div class="input-group-void3">
+            <input class="playerThreeInput text-style-input3" onkeydown="player3HandleInput(event)" type="number">
+            <button class="playerThreeButton" type="submit">Guess</button>
+        </div>
+        <h4 class="text-style3">Chances left: <span class="chanceleft2">0</span>/3</h4>
+    </div>
+    <!-- Player Three End -->
+    <!-- Errors Start -->
+    <h2 class="text-style error1">You have to choose a number between 1 - 10</h2>
+    <h2 class="text-style-input2 error2"></h2>
+    <h2 class="text-style-input3 error3"></h2>
+    <!-- Errors End -->
+    <!-- Winner Section Start -->
+    <div class="winner1">
+        <img style="width: 400px;" src="img/win.png" alt="win">
+        <h1 class="win-text">Winner : Player 1</h1>
+        <h2 class="text-style">Player 2 and 3 was not able to guess the number</h2>
+    </div>
+    <div class="winner2">
+        <img style="width: 400px;" src="img/win.png" alt="win">
+        <h1 class="win-text">Winner : Player 2</h1>
+        <h2 class="text-style2">Player 2 was able to guess the number under 3 chances</h2>
+    </div>
+    <div class="winner3">
+        <img style="width: 400px;" src="img/win.png" alt="win">
+        <h1 class="win-text">Winner : Player 3</h1>
+        <h2 class="text-style3">Player 3 was able to guess the number under 3 chances</h2>
+    </div>
+    <!-- Winner Section End -->
+    <!-- Game Html End -->
+    <script src="js/script.js"></script>
+    <script src="js/ngg.js"></script>
+</body>
+</html>
