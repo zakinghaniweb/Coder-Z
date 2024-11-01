@@ -390,7 +390,7 @@ ul,ol{
 .nav-link:focus{
     color: #0f5a94 !important;
 }
-input[type=checkbox] {
+.toggleLight {
 	height: 0;
 	width: 0;
 	visibility: hidden;
