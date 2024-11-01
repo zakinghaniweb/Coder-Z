@@ -284,7 +284,7 @@ ul,ol{
     transition: .5s all ease;
 }
 .sparkle {
-    width: 600px;
+    width: 100%;
     height: var(--text-height);
     font-size: 50px;
     text-align: center;
